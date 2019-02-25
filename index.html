@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Джино</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+<body>
+    <div class="page" id="Vue">
+        <div class="head">
+            <div>
+                <div class="header">
+                    <div class="jino"><span>ДЖИНО</span> домены</div>
+                    <div class="until">ТОЛЬКО ДО 31 ЯНВАРЯ</div>
+                </div>
+            </div>
+            <h1>Честная цена <br> за домен .ru &ndash; 39&#8381</h1>
+            <div class="domains">
+                <div class="domains-wrap">
+                    <div class="domains-form">
+                        <input autocomplete="off" class="domains-field"  value="example.ru" v-model="val">
+                        <input class="button" type="submit" value="Проверить"@click="domenSub()">
+                    </div>
+                    <p v-html="domen">{{domen}}</p>
+                </div>
+                    <input class="create-acc" type="submit" value="Создать Аккаунт">
+                    <div class="arrom_down"><a href="#Jin"><img src="/dist/img/down.png" alt=""></a></div>                
+            </div>    
+        </div>
+        <div class="dody">
+                <div class="jino-alt" id="Jin"><span>ДЖИНО</span> домены</div>
+                <h2>Зарегистрировав у нас домен, вы получите</h2>
+
+                <img class="img1" @click="switchView('v1')" src="/dist/img/1.png" alt="Сайт-визитка">
+                <p class="text1">Сайт-визитка</p>
+
+                <img class="img2" @click="switchView('v2')" src="/dist/img/6.png" alt="Поддержка DNS">
+                <p class="text2">Поддержка DNS</p>
+
+
+                <img class="img3"  @click="switchView('v3')" src="/dist/img/7.png" alt="Сертификат о владении доменом">
+                <p class="text3">Сертификат о владении <br> доменом</p>
+
+
+                <img class="img4" @click="switchView('v4')" src="/dist/img/8.png" alt="Автопродление">
+                <p class="text4">Автопродление</p>
+
+                
+                        <transition name="switch fade">
+                            <component v-bind:is="currentView"></component>
+                        </transition>
+  
+                        
+
+
+                
+
+                    <img class="img5" @click="switchView('v5')" src="/dist/img/2.png" alt="">
+                    <p class="text5">Облачное хранилище<br> на 20 ГБ</p>
+
+                    <img class="img6" @click="switchView('v6')" src="/dist/img/3.png" alt="">
+                    <p class="text6">Бесплатный SSL-сертификат</p>
+
+
+                    <img class="img7" @click="switchView('v7')" src="/dist/img/4.png" alt="">
+                    <p class="text7">DNSSEC в один клик</p>
+
+
+                    <img class="img8" @click="switchView('v8')" src="/dist/img/5.png" alt="">
+                    <p class="text8">Перенаправление</p>
+
+                <input class="create-acc" type="submit" value="Создать Аккаунт">
+        </div>
+
+        <div class="foot">
+            <div class="contain">
+                <div class="jino"><span>ДЖИНО</span> домены</div>
+                <h2>Почему стоит выбрать &laquo;Джино&raquo;?</h2>
+                <h3>&laquo;Джино&raquo; более 18 лет на рынке,<br>имеет 270 000 довольных клиентов,<br>собственную панель управления<br>и многое другое</h3>
+                <input class="create-acc" type="submit" value="Создать Аккаунт">
+                <div class="text">
+                    <p>Вы получите <span>1000 балов</span> в системе лояльности <a href="">Джино.плюсы</a>,<br>
+                        зарегестрировавшись в течении <span>24 часов</span> после посещения данной страницы
+                    </p>
+                    <p>1000+</p>
+                </div>
+                <p class="copy">&copy; <a href="#">&laquo;Джино&raquo;</a>, 2003&ndash;2007. &laquo;Джино&raquo; является зарегистрированным товарным знаком. Лицензия на телеметрические услуги связи № 97495 от 09.03.2012. <a href="#">Правовая информация</a>.</p>
+            </div>
+        </div>
+
+
+    </div>
+    
+<script src="dist/js/app.js"></script> 
+</body>
+</html>
+
